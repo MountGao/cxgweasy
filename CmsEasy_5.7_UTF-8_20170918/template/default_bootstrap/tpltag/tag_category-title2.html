@@ -1,0 +1,16 @@
+<!--{loop plugins::categoryinfo($_catid) $cat}-->
+<!--<div class="title">-->
+<!--<h3 class="wow fadeInDown" data-wow-delay="0.5s"><a href="{$cat[url]}" title="{$cat[catname]}">{$cat[catname]}<small>{$cat[subtitle]}</small></a></h3>-->
+<!--<p class="wow fadeIn" data-wow-delay="0.5s">{$cat[description]}</p>-->
+<!--<span>——</span>-->
+<!--</div>-->
+<!--{/loop}-->
+{loop plugins::categoryinfo($_catid) $cat}
+<div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6" data-wow-delay="0.5s" >
+    <div class="title" style="text-align: left;">
+        <h3 class="wow fadeInDown" data-wow-delay="0.5s"><a href="{$cat[url]}" title="{$cat[catname]}">{$cat[catname]}</a></h3>
+        <!--<p class="wow fadeIn" data-wow-delay="0.5s">{$cat[description]}</p>-->
+        <span>——</span>
+    </div>
+</div>
+{/loop}

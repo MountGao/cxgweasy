@@ -1,0 +1,18 @@
+{loop plugins::categoryinfo($_catid) $cat}
+<li class="col-xs-12 col-sm-6 col-md-4 col-lg-4 model-three-index">
+<div class="model-three-index-wrapper">
+    <div class="t1">
+        <div class="img-auto">
+            <img alt="{$cat[catname]}" src="{$cat[image]}" class="img-responsive" data-src="{$cat[image]}" onerror='this.src="{config::get('onerror_pic')}"' style="width:100%;height:200px;"/>
+        </div>
+    </div>
+
+
+    <div class="t3">
+        <a href="{$cat[url]}" title="{$cat[catname]}">{$cat[catname]}</a>
+        <p class="description">坚持”深化应用、融合创新“的理念，以智慧教育云服务平台作为支撑，专注于：研发制造教育行业智能教学终端产品，开发各类教学应用软件系统，开展区域教育规划设计和教师培训服务...</p>
+        <p class="subtitle">{$cat[htmldir]}</p>
+    </div>
+</div>
+</li>
+{/loop}

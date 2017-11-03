@@ -1,0 +1,13 @@
+{loop plugins::categoryinfo($_catid) $cat}
+<div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6" data-wow-delay="0.5s" >
+    <div class="title" style="text-align: left;height: 55px;line-height: 55px;">
+        <h3 class="wow fadeInDown" data-wow-delay="0.5s" style="float: left;margin: 0;"><a href="{$cat[url]}" title="{$cat[catname]}">{$cat[catname]}</a> </h3>
+        <a href="{$cat[url]}" style="float: right;">了解更多></a>
+
+    </div>
+    <div class="liner">
+        <div class="color blue"></div>
+        <div class="color green"></div>
+    </div>
+</div>
+{/loop}

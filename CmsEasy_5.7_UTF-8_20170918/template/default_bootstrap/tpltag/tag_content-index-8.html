@@ -1,0 +1,26 @@
+<style>
+.index-7-c{
+    height: 30px;
+}
+.news-list-text-pic p{
+    line-height: 2;
+    font-size: 14px;
+}
+.news-list-text-pic p a:hover{
+    color: #0085cd;
+}
+</style>
+<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+    <div class="index-7-w">
+        {loop archive($_catid,$_typeid,$_spid,$_area,$_length,$_ordertype,$_limit,$_image,$_attr1,$_son,$_wheretype,$_tpl,$_intro_len,$_istop) $archive}
+        <div class="row news-list-text-pic index-7-c">
+            <div class="col-md-9">
+                <p><a href="{$archive[url]}" target="_blank">{cut(strip_tags($archive['introduce']),26)}…</a></p>
+            </div>
+            <div class="col-md-3">
+                <p style="text-align: right;">{$archive[adddate]}</p>
+            </div>
+        </div>
+        {/loop}
+    </div>
+</div>

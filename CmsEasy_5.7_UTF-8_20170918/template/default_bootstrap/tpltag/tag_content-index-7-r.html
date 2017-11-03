@@ -1,0 +1,14 @@
+<div  class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+    {loop archive($_catid,$_typeid,$_spid,$_area,$_length,$_ordertype,$_limit,$_image,$_attr1,$_son,$_wheretype,$_tpl,$_intro_len,$_istop) $archive}
+    <div class="row news-list-text-pic">
+        <div class="col-md-2">
+            <a target="_blank" href="{$archive['url']}" class="img-auto"><img alt="{$archive[stitle]}" src="{$archive[thumb]}" onerror='this.src="{config::get('onerror_pic')}"' class="img-responsive" data-src="{$archive[thumb]}" alt="{$archive[stitle]}" /></a>
+        </div>
+        <div class="col-md-10">
+            <p>{$archive[adddate]}</p>
+            <h4><a title="{$archive[stitle]}" href="{$archive[url]}" target="_blank">{$archive[title]}</a></h4>
+            <p>{cut(strip_tags($archive['introduce']),46)}…<a href="{$archive[url]}" target="_blank">[{lang(more)}]</a></p>
+        </div>
+    </div>
+    {/loop}
+</div>
